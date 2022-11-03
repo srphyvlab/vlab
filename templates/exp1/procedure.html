@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/style.css')}}">
+	<script async = "true" src="http://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"></script>
+	<title>Virtual Labs Dei-Linear Control Systems</title>
+<link rel = "icon" href = 
+"https://www.vlab.co.in/images/logo.jpg" 
+        type = "image/x-icon">
+<style>
+			table, th, td {
+			  border:1px solid black;
+			}
+			table {
+				text-align: center;
+			}
+</style>
+
+</head>
+<body>
+	<header id="header">
+		<button class="menu-btn" id="head-btn" onclick="dispmenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</button>
+		<a href="https://www.vlab.co.in/"><img src="https://www.vlab.co.in/images/logo.jpg"></a>
+		        <div class="right-head">
+            <a href="https://www.vlab.co.in/">HOME</a>
+            <a href="https://www.vlab.co.in/participating-institutes">PARTNERS</a>
+            <a href="https://www.vlab.co.in/contact-us">CONTACT</a>
+        </div>
+	</header>
+	<div class="navigation-bar">
+		<a href="../../index.html">Physical Scienes Lab</a> > <a href="../index.html">Experiments</a>
+	</div>
+	<section class="csection" id="csec">
+		<nav class="side-nav" id="navbar">
+			<div class="nav-element">
+				<a href="{{url_for('exp1')}}" ><span class="cp">Aim</span></a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('theory1')}}" >Theory</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('obj1')}}" >Objectives</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('pre1')}}" >Pretest</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('pro1')}}" >Procedure</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('sim1')}}" >Simulation</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('post1')}}" >Posttest</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('ref')}}" >References</a>
+			</div>
+			<div class="nav-element">
+				<a href="{{url_for('feed')}}" >Feedback</a>
+			</div>
+			</nav>
+		<main class="main-section" id="main-sec">
+		<div class="heading">
+			<h1>Procedure</h1>
+		</div>
+		<div  class="des" id="des">
+			<p><u>Procedure for the experiment is as follows:</u></p>
+			
+				
+				
+					<strong><p style="color:#2867B2;">1.To study the Simple harmonic motion</p></strong>
+					<ul>
+					<li> <p>step1: Read the theory </p> </li>
+					<li> <p>step2: Set the damping factor (`b`) = 0 </p></li>
+					
+					<li> <p>step3: set `v_o`= 0 m/s</p></li> 
+					<li> <p>step4: Drag the ball to maximum starting position say `x_o`= 10.0m and play the animation button. </p></li>
+					<li> <p>step5: Observe the graph,wait until  the animation ends</p></li>	
+					<u style="color:darkblue;"><p style="color:darkblue;">Graph representing S.H.M motion (position graph)</p></u>
+					<img src="{{url_for('static', filename='img/graph1.png')}}" alt="screenshot1"
+					  width="500px" height="300px">
+					<u style="color:darkblue;"><p style="color:darkblue;">Graph representing S.H.M motion (position and velocity graph)</p></u>
+					<img src="{{url_for('static', filename='img/graph2.png')}}" alt="screenshot2"
+					  width="500px" height="300px">
+					</ul>
+					<br>
+
+
+
+                       <strong><p style="color:#2867B2;">2.To study Damped oscillatory motion</p></strong>
+					   <ul>
+						<li><p>step1: Reset the simulation</p></li>
+					
+						<li><p>step2: Set  `v_o`= 0 m/sec </p></li>
+						<li><p>step3: change the damping factor(`b`) from 0 to some value take three cases and 
+							reset the simulation in each case</p></li>
+						<ul ><li><p>Case 1:<u>Under-Damping </u></p></li>
+						    <p>Set the value of `b` < 1 (say `b`= 0.5) </p>
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing under-damped oscillatory  motion (position graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph3.png')}}" alt="screenshot3"
+					        width="500px" height="300px">
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing under-damped oscillatory motion (position and velocity graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph4.png')}}" alt="screenshot4"
+					        width="500px" height="300px">
+							<li><p>Case 2: <u>Critical-Damping</u></p></li>
+							<p>Set the value of `b` = 1  </p>
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing critical-damped oscillatory motion (position graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph5.png')}}" alt="screenshot5"
+					        width="500px" height="300px">
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing critical-damped oscillatory motion (position and velocity graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph6.png')}}" alt="screenshot6"
+					        width="500px" height="300px">
+							<li><p>Case 3: <u>Over-Damping</u></p></li>
+							<p>Set the value of `b` > 1 (say `b`= 2) </p>
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing over-damped oscillatory motion (position graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph7.png')}}" alt="screenshot7"
+					        width="500px" height="300px">
+							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing over-damped oscillatory motion (position and velocity graph)</p></u>
+							<img src="{{url_for('static', filename='img/graph8.png')}}" alt="screenshot8"
+					        width="500px" height="300px"></ul>
+						<li><p>step4: Drag the ball to maximum starting position say `x_o`= 10.0m  and play the animation button.</p></li>
+						<li><p>step5: In all the above three cases mentioned observe the graph and wait till animation ends.</p></li>
+					</ul>
+					<br>
+
+					   
+						
+						
+						<strong><p style="color:#2867B2;">3.To study Forced oscillatory motion</p></strong>
+						<ul>
+						<li> <p>step1: Reset the simulation again </p> </li>
+						<li> <p>step2: Set the damping coefficient (`b`) > 1 </p></li>
+						<li> <p>step3: Change the value of initial velocity `v_o`= 2m/sec</p></li> 
+						<li> <p>step4: Set value of driven frequency(`ω`) = 1.41</p></li>
+						<li> <p>step5: Set some value of driven amplitude F<sub>o</sub> which will be the force for oscillation</p></li>
+						
+						<li> <p>step6: Drag the ball to maximum starting position say `x_o`= 10.0m  and play the animation button.</p></li>
+						<li> <p>step7: Observe the graph till the animation ends</p></li>
+						<u style="color:darkblue;"><p style="color:darkblue;">Graph representing forced-oscillatory motion (position graph)</p></u>
+						<img src="{{url_for('static', filename='img/graph9.png')}}" alt="screenshot9"
+					    width="500px" height="300px">
+						<u style="color:darkblue;"><p style="color:darkblue;">Graph representing forced-oscillatory motion (position and velocity graph)</p></u>
+						<img src="{{url_for('static', filename='img/graph10.png')}}" alt="screenshot310"
+					    width="500px" height="300px">
+						
+						</ul>
+					<br>
+					<b><p style="color:#e52d27;"><u> Perform the following experiments</u></p></b>
+					<!--<p style="color:blueviolet;">  <strong><u>Experiment-1: </u></strong></p><p>With damping, b set to 0.2 Ns/m and F0 set to 1.0 N 
+						 try several values of the angular driving frequency, ω. Start with a value of 1.1 rad/s 
+						 and increase by 0.1 each time until you get to 1.8 rad/s. In each case, wait until the
+						 animation ends and measure the amplitude by clicking on the top of the curve near the end.
+						 The second number in the yellow box is the amplitude in m. <br>Write down the amplitude for 
+						each driving frequency.<br> Which driving frequency ended up giving the largest amplitude?</p>
+					<br>
+					<p>Record the values into the table below</p>
+                    <table style="width:50%">
+                      <tr>
+					  <th style="width:10%">S.no</th>
+                      <th style="width:10%">b</th>
+                      <th style="width:10%">F<sub>o</sub></th>
+                      <th style="width:10%">ω</th>
+					  <th style="width:10%">Amplitude</th>
+					  <th style="width:5%">x<sub>o</sub></th>
+                     </tr>
+                         
+                     <tr>
+					 <td>1.</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+					 <td></td>
+					 <td></td>
+                     </tr>
+
+					 <tr>
+						<td>2.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>3.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>4.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+				    </tr>
+
+
+					<tr>
+						<td>5.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td>6.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						</tr>
+
+					<tr>
+							<td>7.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+					</tr>
+
+					<tr>
+						<td>8.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						</tr>
+                     </table>
+					 <br>
+					
+					<p>Result:  The maximum amplitude is  _________<br></p>-->
+					<p>
+						<strong><p style="color:blueviolet;"><u>Experiment-1:</u> </p></strong>
+							<p>	Perform experiment to calculate the value of k (spring constant) in the following
+								cases described below.
+								In each case record observations into the table and compute the value of `k`.
+							Take value of `m` =1 kg in each case.</p>
+							    <ul type="None">
+									<li><p><u>Case 1:</u> Free oscillator (simple harmonic motion) when `b` = 0</p></li>
+									    <ol>
+                                            <li><p>set different values for `x_o`</p></li>
+											<li><p> keep other parameters = 0</p></li>
+											<li><p>record the value of time in each case</p></li>
+											<li><p>calculate corrosponding angular frequency</p></li>
+											<li><p>then compute `k` (spring constant) using formula: `\omega=\sqrt{\frac{k}{m}}`</p></li>
+											<table style="width:80%">
+												<tr>
+												<th style="width:1%" >S.no</th>
+												<th style="width:12%">`x_o` (displacement)</th>
+												<th style="width:5%">`f` (frequency)</th>
+												<th style="width:18%">`\omega` (angular frequency)</th>
+											   </tr>
+											   <tr>
+												<th>1.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+											  <tr>
+												<th>2.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+											 
+											  <tr>
+												<th>3.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>4.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>5.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>6.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   
+											
+											</table>
+										
+										
+										<ul type="None">
+                                        <p style="color:darkmagenta;"> The mean `\omega`: _________ </p></li>
+										<li><p style="color:darkmagenta;">Computed value of `k`:__________</p></li></ul>
+                                    </ol>
+										
+										<br>
+									<li><p><u>Case 2:</u>Under-Damped damped Oscillator when `b` < 1 </p></li>
+									   <ol >
+
+										    <li><p>set different values for `x_o`</p></li>
+											<li><p> set `b<1` and keep other parameters =0 </p></li>
+											<li><p>record the value of time in each case</p></li>
+											<li><p>calculate corrosponding angular frequency</p></li>
+											<li><p>then compute `k` (spring constant) using formula: `\omega = \sqrt {\frac{k}{m}-\frac{b^2}{4m^2}} `</p></li>
+											<ul type="None">
+											<li><p style="color:darkmagenta;">Value of `b` used in the experiment:_________</p></li></ul>
+											<table style="width:80%">
+												<tr>
+												<th style="width:1%" text-align="center;">S.no</th>
+												<th style="width:13%">`x_o` (displacement)</th>
+												<th style="width:5%">`f` (frequency)</th>
+												<th style="width:18%">`\omega` (angular frequency)</th>
+											   </tr>
+											   <tr>
+												<th>1.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+											  <tr>
+												<th>2.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+											 
+											  <tr>
+												<th>3.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>4.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>5.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+						
+											   <tr>
+												<th>6.</th>
+												<th></th>
+												<th></th>
+												<th></th>
+											   </tr>
+											</table>
+									
+										<ul type="None">
+										<li><p style="color:darkmagenta;">The mean `\omega` = ________</p></li>
+										<li><p style="color:darkmagenta;"> computed value of `k`=_____________</p></li></ul>
+									</ol>
+										<br>
+								    <li><p><u>Case 3:</u> Forced oscillator when `b` > 1 </p></li>
+											
+								
+									<ol>
+										<li><p>set different values for `F_o`</p></li>
+										<li><p> set `b`=0.40,driven frequency(`\omega`)=1rad/sec, </p></li>
+										<li><p> obtain the value of amplitude by observing graph each time.</p></li>
+										<li><p>obtain the value of `\omega` using the relation:
+											<div class="cmath">
+												<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`A= \frac{F_o}{m\sqrt{(\omega^2-\omega_o^2)^2 + 4\gamma^2m^2`</p>
+												
+											</div></li>
+										<li><p>then compute k (spring constant) from the calculated mean value of </p></li><br>
+										<table style="width:80%">
+											<tr>
+											<th style="width:2%" text-align="center;">S.no</th>
+											<th style="width:10%">`F_o` (force)</th>
+											<th style="width:5%">`A` (amplitude)</th>
+											<th style="width:10%">`\omega` (angular frequency)</th>
+										   </tr>
+										   <tr>
+											<th>1.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+										  <tr>
+											<th>2.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+										 
+										  <tr>
+											<th>3.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+					
+										   <tr>
+											<th>4.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+					
+										   <tr>
+											<th>5.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+					
+										   <tr>
+											<th>6.</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										   </tr>
+										</table>
+									
+									<ul type="None">
+										<li><p style="color:darkmagenta;">The mean `\omega` = ________</p></li>
+										<li><p style="color:darkmagenta;"> computed value of `k`=_____________</p></li></ul>
+									</ol>
+										
+									</ul>
+									 
+								
+									
+							
+							
+					
+					
+					</p>
+		
+			</p>
+		</div>
+		</main>
+	</section>
+<footer >
+            <div class="foot1">
+                <div class="fheading">
+                    <h4>Community Links</h4>
+                </div>
+                <div class="fdes">
+                    <a href="https://sakshat.ac.in/">Sakshat Portal</a>
+                    <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+                    <a href="https://www.vlab.co.in/faq">FAQ: Virtual Labs</a>
+                </div>
+            </div>
+                <div class="foot2">
+                <div class="fheading">
+                    <h4>Contact us</h4>
+                </div>
+                <div class="fdes">
+                    <p>Phone: General Information:</p>
+                    <p >011-26582050</p>
+                    <p>Email: support@vlabs.ac.in</p>
+                </div>
+                </div>
+                <div class="foot3">
+                <div class="fheading">
+                    <h4>Follow Us</h4>
+                </div>
+                <div class="fdes desm">
+                    <a href="" class="sm" style="background:#fff;margin:15px 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25.2" height="25.2" fill="#3B5998" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/TheVirtualLabs" class="sm" style="background:#55acee ;margin:15px 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16" style="position: relative; left: 4px; top:5px;">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                        </svg>
+                    </a>
+                    <a href="" class="sm" style="background:#e52d27;margin:15px 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16" style="position: relative; left: 4px; top:5px;">
+                         <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                        </svg>
+                    </a>
+                    <a href="https://in.linkedin.com/in/virtual-labs-008ba9136" class="sm" style="background:#2867B2; margin:15px 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-linkedin" viewBox="0 0 16 16" style="position: relative; left: 5px; top:5px;">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                        </svg>
+                    </a>
+                </div>
+                    </div>
+                    <div class="endfoot">
+                        <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPL 3.0</a>  &  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons (CC BY-NC-SA 4.0)</a>
+                    </div>
+        </footer>
+		<script type="text/javascript" src="src/js/main.js"></scrip>
+</body>
+</html>
