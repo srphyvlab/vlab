@@ -76,7 +76,7 @@ def pre2():
 
 @app.route('/experiments/quantum/pretest')
 def pre3():
-    return render_template('exp3/theory.html')
+    return render_template('exp3/pretest.html')
 
 @app.route('/experiments/SHM/procedure')
 def pro1():
