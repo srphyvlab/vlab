@@ -64,7 +64,7 @@ def theory2():
 
 @app.route('/experiments/quantum/theory')
 def theory3():
-    return render_template('exp1/theory.html')
+    return render_template('exp3/theory.html')
 
 @app.route('/experiments/SHM/pretest')
 def pre1():
