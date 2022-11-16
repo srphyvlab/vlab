@@ -17,11 +17,12 @@ def obj():
 @app.route('/experiments/SHM/objectives')
 def obj1():
     return render_template('exp1/objective.html')
+
 @app.route('/experiments/Young/objectives')
 def obj2():
     return render_template('exp2/objective.html')
 
-@app.route('/experiments/Young/objectives')
+@app.route('/experiments/Quantum/objectives')
 def obj3():
     return render_template('exp3/objective.html')
 
@@ -37,7 +38,7 @@ def exp1():
 def exp2():
     return render_template('exp2/index.html')
 
-@app.route('/experiments/exp3')
+@app.route('/experiments/Quantum')
 def exp3():
     return render_template('exp3/index.html')
 
@@ -61,7 +62,7 @@ def theory1():
 def theory2():
     return render_template('exp2/theory.html')
 
-@app.route('/experiments/Young/theory')
+@app.route('/experiments/Quantum/theory')
 def theory3():
     return render_template('exp3/theory.html')
 
@@ -75,7 +76,7 @@ def pre1():
 def pre2():
     return render_template('exp2/pretest.html')
 
-@app.route('/experiments/Young/pretest')
+@app.route('/experiments/Quantum/pretest')
 def pre3():
     return render_template('exp3/pretest.html')
 
@@ -87,7 +88,7 @@ def pro1():
 def pro2():
     return render_template('exp2/procedure.html')
 
-@app.route('/experiments/Young/procedure')
+@app.route('/experiments/Quantum/procedure')
 def pro3():
     return render_template('exp3/procedure.html')
 
@@ -101,6 +102,10 @@ def sim1():
 def sim2():
     return render_template("exp2/Driven Damped Harmonic Motion.html")
 
+@app.route('/experiments/Quantum/simulation', methods=["POST", "GET"])
+def sim2():
+    return render_template("exp3/index.html")
+
 @app.route('/experiments/SHM/posttest')
 def post1():
     return render_template('exp1/posttest.html')
@@ -109,7 +114,7 @@ def post1():
 def post2():
     return render_template('exp2/posttest.html')
 
-@app.route('/experiments/Young/posttest')
+@app.route('/experiments/Quantum/posttest')
 def post3():
     return render_template('exp3/posttest.html')
 
@@ -117,11 +122,15 @@ def post3():
 @app.route('/experiments/SHM/references')
 def ref():
     return render_template('exp1/references.html')
+
 @app.route('/experiments/Young/references')
 def ref2():
     return render_template('exp2/references.html')
-@app.route('/experiment/Young/references')
+
+@app.route('/experiment/Quantum/references')
 def ref3():
     return render_template('exp3/references.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
