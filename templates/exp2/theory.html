@@ -30,10 +30,10 @@
 	<section class="csection" id="csec">
 		<nav class="side-nav" id="navbar">
 			<div class="nav-element">
-				<a href="{{url_for('exp2')}}" ><span class="cp">Aim</span></a>
+				<a href="{{url_for('exp2')}}" >Aim</a>
 			</div>
 			<div class="nav-element">
-				<a href="{{url_for('theory2')}}" >Theory</a>
+				<a href="{{url_for('theory2')}}" ><span class="cp">Theory</span></a>
 			</div>
 			<div class="nav-element">
 				<a href="{{url_for('obj2')}}" >Objectives</a>
@@ -65,14 +65,14 @@
 		<div  class="des" id="des">
 				<p> <center><h3>Young's Double Slit Experiment</h3></center>
 					<p>Wave-
-						 A wave is a propagation of disturbance .<br><br><u><strong>Example</strong> </u>When we make a sharp needle
+						 A wave is a propagation of disturbance .<br><br><strong>Example</strong> When we make a sharp needle
 						 vibrate in a calm pool of water , a circular pattern spreads out from the  point of impact . 
 						 the vibrating needle creates a disturbance that propagates outwards . in this propagation ,the water 
 						 molecules do not move  instead they move in nearly circular orbits about an equilibrium position.
 						 Once the disturbance has passed a certain region , every drop of water is left at its original position.</p>
-					<img src="{{url_for('static', filename='img/young1.png')}}" alt="water ripples" width="300px" height="200px">
+					<!-- <img src="{{url_for('static', filename='img/young1.png')}}" alt="water ripples" width="300px" height="200px"> -->
 					
-					<p><u>Nature of light:-</u>
+					<p>Nature of light: 
 					<p>The light possess two natures acccroding to particle duality of nature </p>
 					<ol>
 						<li><p><strong>Particle nature of light:</strong><br>
@@ -90,7 +90,7 @@
 							The production of light is from one of these two methods–<br>
 							 <strong> Incandescence</strong> It is the emission of light from hot matter. <br>
 							 <strong> Luminescence</strong> It is the emission of light during the fall of excited electrons to the ground level.
-							<img src="{{url_for('static' , filename='img/young2.png')}}" alt="em waves" width="300px" height="200px"> 
+							<!-- <img src="{{url_for('static' , filename='img/young2.png')}}" alt="em waves" width="300px" height="200px">  -->
 							
 						<br>
 						<br>
@@ -101,21 +101,20 @@
 							superposition of two(or more) waves is called interference.<br>
 							Interfernece is of two types:-</p>
 							<ul type ="None">
-								<li><strong>Constructive interference:-</strong>Constructive interference occurs where the lines 
+								<li><strong>Constructive interference:</strong>Constructive interference occurs where the lines 
 									(representing peaks), cross over each other. 
 									In other words, when two waves are in phase.
-								<img src="{{url_for('static', filename='img/young4.png')}}" alt="constructive" width="300px" height="200px">
+								<img src="{{url_for('static', filename='img/young4.png')}}" alt="constructive" width=400px>
 							    <br>
-								<u>Constructive interference:-</u><br>
-								<br> `d.sin(\theta)= n\lambda(n=0,1,2....)`<br><br>
-								                       position `y_n`=`\frac{n\lamdaD}{d} (n=0,1,2....)`
+								Constructive interference:<br>
+								<p><img src="{{url_for('static' , filename='img/eq23.png')}}" alt="destructive" width=400px><br></p>
 								<p>where:-<br>
 								<ul type="None">
-									<li><p>`\theta`: diffraction angle(rad)</p></li>
-									<li><p>d : slit spacing(`m`)</p></li>
-									<li><p>`\lambda` : wavelength of light(`m`)</p></li>
-									<li><p>D : distance from slit to screen(`m`) </p></li>
-									<li> When 'n=`0`', then diffraction angle of the central axis '`\theta = 0`'</li>
+									<li><p>θ: diffraction angle(rad)</p></li>
+									<li><p>d : slit spacing(m)</p></li>
+									<li><p>λ: wavelength of light(m)</p></li>
+									<li><p>D : distance from slit to screen(m) </p></li>
+									<li> When n = 0, then diffraction angle of the central axis θ = 0</li>
 								</ul>
 								</p>
 
@@ -124,67 +123,69 @@
 								<li><strong>Destructive interference:-</strong>Destructive interference occurs 
 									where two waves are completely out of phase 
 								. In other words, when two waves are out-phase phase 
-									by `180^{\text{o}}` or `pi`, 
+									by 180<sup>°
+									</sup> or π , 
 									
-								<img src="{{url_for('static' , filename='img/young5.png')}}" alt="destructive" width="300px" height="200px"><br>
+								<img src="{{url_for('static' , filename='img/young5.png')}}" alt="destructive" width=400px><br>
 							     <br>
-								 <u>Destructive interference:-</u><br>
-								<br> `d.sin(\theta)= (n+\frac{1}{2})\lambda  (n = 0,1,2...)`<br>
-								                       position `y_n`=`\frac{(n+\frac{1}{2})\lamdaD}{d} (n=0,1,2....)`
-								<p>where:-<br>
+								 Destructive interference: <br>
+								<p><img src="{{url_for('static' , filename='img/eq22.png')}}" alt="destructive" width=400px><br></p>
+								<p>where:<br>
 								<ul type="None">
-									<li><p>`\theta`: diffraction angle(rad)</p></li>
-									<li><p>d : slit spacing(`m`)</p></li>
-									<li><p>`\lambda` : wavelength of light(`m`)</p></li>
-									<li><p>D : distance from slit to screen (`m`)</p></li>
+									<li><p>θ: diffraction angle(rad)</p></li>
+									<li><p>d : slit spacing(m)</p></li>
+									<li><p>λ : wavelength of light(m)</p></li>
+									<li><p>D : distance from slit to screen (m)</p></li>
 									
 								</ul>
 							</li>
 							</ul>
                                
-								<p><u><strong>Interference Fringes:-</strong></u></p>
+								<p><strong>Interference Fringes:-</strong></p>
 								<p>when two light waves are made to interfere we get alternate dark and bright bands
 										of a regualar or irregualr shape. These are called Interference fringes.
 									</p>
-								<p><strong>Young's double experiment:</strong>When the light is allowed to fall on a pinhole `S` and then through two pinholes
-                                    `s_1` ,`s_2` placed at a distance d , then two spherical waves emerging from `s_1`
-									and `s_2` merge together and alternate bright and dark bands are observed on the screen 
+								<p><strong>Young's double experiment:</strong>When the light is allowed to fall on a pinhole S and then through two pinholes
+                                    s<sub>2</sub> ,s<sub>2</sub> placed at a distance d , then two spherical waves emerging from s<sub>1</sub>
+									and s<sub>2</sub> merge together and alternate bright and dark bands are observed on the screen 
 									which is at distance D from the two sources. the resultant amplitude obtained is greater. <br>
 									<br>
-									<img src="{{url_for('static' , filename='img/young6.png')}}" alt="young's" width="300px" height="200px">
-									<img src="{{url_for('static', filename='img/interferrence.png')}}" alt="interference patttern" width="300px" height="200px"></p>
+									<!-- <img src="{{url_for('static' , filename='img/young6.png')}}" alt="young's" width="300px" height="200px"> -->
+									<!-- <img src="{{url_for('static', filename='img/interferrence.png')}}" alt="interference patttern" width="300px" height="200px"></p> -->
 									<ol> <li>the distance between two slits is d.</li> <br>
 										<li> The sources used are coherent sources. <br>
-										<strong>coherent sources:-</strong>when two light waves having sharply 
+										<strong>coherent sources:</strong>when two light waves having sharply 
 									defined phase difference that remains constant with time,they are said to be coherent.
-								They can be obtained via different methods. such as:
+								They can be obtained via two different methods as follows:
+								<p><strong>Division of wavefront</strong></p>
 							<ol type="i">
-                                <li><p style="color:blue;">Lylod's mirror: In this device a slit s and its virtual image s' formed by 
+								
+                                <li><p >Lylod's mirror: In this device a slit s and its virtual image s' formed by 
 									reflection at a mirror </p>
-								<img src="{{url_for('static' , filename='img/young7.png')}}" alt="lylod" width="300px" height="200px">
+								<!-- <img src="{{url_for('static' , filename='img/young7.png')}}" alt="lylod" width="300px" height="200px"> -->
 								</li>
-								<li><p style="color:blue;">Fresnel's biprism: coherent sources formed by refraction from a biprism .</p>
-								  <img src="{{url_for('static' , filename='img/young8.png')}}" alt="fresnel" width="300px" height="200px">
+								<li><p >Fresnel's biprism: coherent sources formed by refraction from a biprism .</p>
+								  <!-- <img src="{{url_for('static' , filename='img/young8.png')}}" alt="fresnel" width="300px" height="200px"> -->
 								</li>
-								<li> <p style="color:blue;">Thin films: in this coherent sources are obtained by division of amplitude.</p></li>
+							</ol>
+							<p><strong>Division of amplitude</strong></p>
+							<ol type="i">
+								<li> <p >Thin films: in this coherent sources are obtained by division of amplitude.</p></li>
 
 							</ol></li> </ol>
 								</p>		 
 					</ol>
 					</p>
-					<p style="color:red;"><strong>Fringe width:-</strong></p>
+					<p ><strong>Fringe width:-</strong></p>
 					<p>It is defined as the distance between two alternative
 						dark or bright bands. </p>
 					<p>Expression for fringe width:-</p>
-					<p style = "padding:10px; border: 2px solid blueviolet; margin-right:700px; text-align: center;">
-						
-						`\beta = \frac{\lambdaD}{d}`
-					</p>
+					<p><img src="{{url_for('static' , filename='img/eq24.png')}}" alt="destructive"width=250px><br></p>
 					<p>where:-<br>
 					<ul type="None">
-					   <li> <p>`\beta` = fringe width(`m`) </p> </li> 
-					   <li> <p>`\lambda` = wavelength of wave (`nm`)</p></li> 
-					   <li> <p> d = distance between the slits (`m`)</p> </li> 
+					   <li> <p>𝛽 = fringe width(m) </p> </li> 
+					   <li> <p>λ = wavelength of wave (nm)</p></li> 
+					   <li> <p> d = distance between the slits (m)</p> </li> 
 					   </p>
 					</ul>
 					<p>The expression for fringe width is same for bright and dark bands.</p>
