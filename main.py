@@ -100,6 +100,10 @@ def sim1():
 def sim2():
     return render_template("exp2/Driven Damped Harmonic Motion.html")
 
+@app.route('/experiments/quantum/simulation', methods=["POST", "GET"])
+def sim3():
+    return render_template("exp2/Driven Damped Harmonic Motion.html")
+
 @app.route('/experiments/SHM/posttest')
 def post1():
     return render_template('exp1/posttest.html')
