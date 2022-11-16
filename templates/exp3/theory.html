@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/style.css')}}">
 	<script src="http://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"></script>
-	<title>Virtual Labs Dei-Linear Control Systems</title>
+	<titleDEI VLAB</title>
 	<link rel = "icon" href = 
 "https://www.vlab.co.in/images/logo.jpg" 
         type = "image/x-icon">
@@ -25,15 +25,15 @@
         </div>
 	</header>
 	<div class="navigation-bar">
-		<a href="../../index.html">Physical Sciences Lab</a>  <a href="../index.html">Experiments</a>
+        <a href="{{url_for('index')}}">Waves, Optics, and Quantum Mechanics Laboratory</a> > <a href="{{url_for('exp')}}">Experiments</a>
 	</div>
 	<section class="csection" id="csec">
 		<nav class="side-nav" id="navbar">
 			<div class="nav-element">
-				<a href="{{url_for('exp1')}}" ><span class="cp">Aim</span></a>
+				<a href="{{url_for('exp1')}}" >Aim</a>
 			</div>
 			<div class="nav-element">
-				<a href="{{url_for('theory1')}}" >Theory</a>
+				<a href="{{url_for('theory1')}}" ><span class="cp">Theory</span></a>
 			</div>
 			<div class="nav-element">
 				<a href="{{url_for('obj1')}}" >Objectives</a>
@@ -63,256 +63,58 @@
 		</div>
 		
 		<div  class="des" id="des">
-				<p> <center><h3>Young's Double Slit Experiment</h3></center>
-					<p> What is a wave? <br> A wave is prpogation of disturbance .<strong>example</strong>
-					when we make a sharp needle vibrate in a calm poool of water , a circular pattern spreads out 
-				from the point of impact . The vibrating needle creates a disturbnace that propagates outwards.
-			In this propagation the water molecules do not move outward with the wave; instead they move in nearly
-		circular orbits about an equilibrium position.Once the disturbnace has  passed a certain region,every drop of
-	water is left at its original position . this fact can easily be verified by placing a small piece of</p>
-					<p>Simple harmonic motion (SHM) is a type of oscillating motion.
-					When there is a slight disturbance from their equilibrium or rest postion, it will oscillate with harmonically . 
-					This is the most fundamental vibration of a single particle or one-dimensional system. 
-					A small displacement x from its equilibrium position sets up a restoring force which is proportional
-					to x acting in a direction towards the equilibrium position</p></p>
-					<center>
-					<p>
-					`F = -kx`<br>
-				    </p>
-				    </center>
-					<p>
-					It is used to model many situations in real life where a mass oscillates about an equilibrium point. 
-					<strong>Examples are illustrated below:</strong></p><br>
-					<ol class="examples">
-						<li><b>Simple Pendulum </b></li>
-						      <p> It is a simple pendulum, 
-							   a mass `m` swinging at the end of a light rigid rod of length `l`</p>
-							   <img src="{{url_for('static', filename='img/simple.gif')}}" alt="pendulum" width="300px" height="200px">
-							   
-						<li><u>Mass attatched to the spring</u></li>
-						      <p>A mass fixed to a wall via a spring of stiffness s sliding to and fro in the `x`
-							  direction on a frictionless plane</p>
-                              <img src="{{url_for('static', filename='img/spring mass system.gif')}}" alt="spring mass" width="100px" height="200px">
-							  <br>
-							  <img src="{{url_for('static', filename='img/mass spring system2.gif')}}" alt="spring mass" width="300px" height="200px" ><br>
-						    	
-						<li><u>U-Tube example using shm motion</u></li>
-				        <p>
-						Motion of an oscillating liquid column in a U tube is SHM with period, `T = 2\pigh` ,
-						 where h is the height of liquid column in one arm of U tube in equilibrium position of liquid.
-						  Therefore, `T` is independent of density of liquid.</p>
-						  <img src="{{url_for('static', filename='img/u-tube.gif')}}" alt="u-tube" width="300px" height="200px">
-						<!-- <li><u>U-tube</u></li>
-						      <p> is a frictionless U-tube of constant cross-sectional area containing a length l of
-							  liquid, density ρ, oscillating about its equilibrium position of equal levels in each
-							  limb.</p> -->
-						<li><u>LC Oscillator</u></li>
-						      <p>  is an electrical circuit, an inductance L connected across a capacitance `C` carrying
-								a charge `q`.</p>
-								<img src="{{url_for('static', filename='img/lc oscillator.gif')}}" alt="lc oscillator" width="300px" height="200px">
-					</ol>
-					<p>The governing equation for the  motion is :-</p> 
-						 
-							<div class="cmath">
-								<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`m \ddot x + b \dot x + kx = F_o sin( \omega t + \phi)`</p>
-								
-							</div>
-							
-						   
-								
-								<ul>
-								<li>`m`: mass of the ball in kg</li><br>
-							       <li>`b`: damping factor in (Ns/m)</li><br>
-								   <li>`k` : spring constant in N/m</li><br>
-                                   <li>`F_o`: Force in Newton(N)</li><br>
-								   <li>`\omega`: driven frequency in rad/sec</li><br>
-								   <li>`t`: time period</li><br>
-								   <li>`\phi`: phase angle</li><br>
+				<p> <center><h3>Quantum nature of light using young's double slit experiment.</h3></center>
+					<p> The double-slit experiment is a demonstration that light and matter 
+						can display characteristics of both classically defined waves and particles; moreover, 
+						it displays the fundamentally probabilistic nature of quantum mechanical phenomena. <br> 
+						This type of experiment was first performed, using light, by Thomas Young in 1802.<br>At that time it was
+						 thought that light consisted of either waves or particles. 
+						 In 1927, Davisson and Germer demonstrated that electrons show the same behavior, 
+						 which was later extended to atoms and molecules.
+						 Thomas Young's experiment with light was part of classical physics long before the development 
+						 of quantum mechanics and the concept of wave–particle duality.
+                         <br>
+						 He believed it demonstrated that the wave theory of light was correct, 
+						 and his experiment is sometimes referred to as Young's experiment or Young's slits.
+					     <br>
+						 The experiment belongs to a general class of "double path" experiments, in which a wave is split into two separate waves (the wave is typically made of many photons and better referred to as a wave front, not to be confused with the wave properties of the individual photon) that later combine into a single wave. Changes in the path-lengths of both waves result in a phase shift, creating an interference pattern. Another version is the
+						  Mach–Zehnder interferometer, which splits the beam with a beam
+						   splitter.  
+					
+					<p> <strong><u>Wave front:</u></strong><br>
+						The experiment belongs to a general class of "double path" experiments, in which a wave is 
+						split into two separate waves 
+						(the wave is typically made of many photons and better referred to as a wave front</p>
+					<p><strong>Interference pattern</strong><br>
+						Changes in the path-lengths of both waves result in a phase shift, creating an interference pattern</p>
+						<p><strong><u>illustration about experiment.</u></strong></p>
+						<p>In the basic version of this experiment, a coherent light source, such as a laser beam, 
+							illuminates a plate pierced by two parallel slits, and the light passing through the slits is observed on a screen behind the plate.
+							 The wave nature of light causes the light waves passing through the two slits to interfere, producing bright and dark bands on the screen – 
+							a result that would not be expected if light consisted of classical particles</p>
+						<p>Particles show the interference pattern while passing the double slit</p>
+						<p><strong>Example:</strong>Other atomic-scale entities, such as electrons, 
+							are found to exhibit the same behavior when fired towards a double slit.<br>
+							The experiment can be done with entities much larger than electrons and photons, 
+							although it becomes more difficult as size increases. The largest entities for which the double-slit 
+							experiment has been performed were molecules that each comprised `2000` atoms </p>
 
-								</ul>
-							</p>
-					</p>
-					<center>
-					<h2><u>Free Oscillators</u> </h2> </center>
-					<ul type="None">
-						<li><p>Free oscilations occurs when the motion 
-							is maintained by gravitational or elastic restoring forces, such as the 
-							swinging motion of a pendulum or the vibration of an elastic rod
-							The simplest type of vibrating motion is undamped free vibration </p></li>
-							<br>
-						<li><p> <strong>Example:</strong>Some examples of free oscillations are oscillations of simple pendulum, 
-							oscillations of object connected to a horizontal spring, 
-							sound produced by tuning fork in short distance, notes of musical instruments, organ pipe, etc.</p> </li>
-						<p>Horizontal spring mass system</p>
-						<img src="{{url_for('static', filename='img/horizontal spring mass system.gif')}}" alt="horizontal" width="300px" height="200px">
-						<p> Tuning fork</p>
-						<img src="{{url_for('static', filename='img/tuning fork.gif')}}" alt="tuning fork" width="300px" height="200px" >  
-						<li><p><u><strong>Nature of free oscillations</strong></u> <br>
-							Amplitude and frequency of a freely vibrating body remains constant. 
-							They do not lose or gain any energy in the process. 
-							Free vibrations for sound can occur only in vacuum. 
-							Such vibrations are ideal conditions of oscillations. 
-							It is not possible to practically realize free oscillations. </p></li>
-						<li><p> In this type of motion `F_o`, `b` (damping factor)=0<br> So the equation(1) is :
-							<div class="cmath">
-								<p style="padding: 10px; border: 2px solid red; margin-right:500px; text-align: center;">`m \ddot x + kx = 0`</p>
-								
-							</div></p>
-							
-						<li><p style="color:darkmagenta;">The solution of the equation is:- `Acos(\omegat+\phi)` which represents simple harmonic motion </p></li>
-						<li><p>where amplitude  is give as:</p></li>
-							<li><div class="cmath">
-								<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`A= \frac{F_o}{m\sqrt{(\omega^2-\omega_o^2)^2 + 4\gamma^2m^2`</p>
-								
-							</div>	</p></li>
-					       <li><p><strong><div class="cmath" style="color:blue;"><p>ω<sub>o</sub> is the natural frequency of the system :
-							`\sqrt\frac{k}{m}`</p>
-							
-						</div></p> </li></strong>
+						<p><strong>Interference of individual particles</strong></p>
+						<ul type = "None">
+						<li><p><strong><u>Wave particle duality</u>	</strong></p></li>
 						
-					</ul>
-					  
-					<br> </p>
-					<center>
+						<li><p>Is the concept in which quantum mechanics in which every particlemay be described either as a wave or a <br>
+						particle ..</p></li>
+						<li><p>An important version of this experiment involves single particles. 
+							Sending particles through a double-slit apparatus one at a time results in single particles
+							 appearing on the screen, as expected. Remarkably, however, an interference pattern emerges
+							  when these particles are allowed to build up one by one 
+							   This demonstrates the wave–particle duality, which states that all matter 
+							   exhibits both wave and particle properties: The particle is measured as a single pulse at a single position,
+							    while the wave describes the probability of absorbing the particle at a specific place on the screen. 
+							This phenomenon has been shown to occur with photons, electrons, atoms, and even some molecules</p></li>
 
-						<h2><u>Damped Oscillators</u> </h2> </center>
-						<ul type="None">
-							<li><p>A damping oscillation is one in which the moving particle gradually loses its
-								kinetic energy on interaction with resistive forces like air or friction.
-							   Due to this resistance offered by external forces,
-							   the displacement of a particle slowly reduces with time and ultimately reaches its state of rest. </li></p>
-							</li>
-								
-							<li><p><strong>Example:</strong>A simple pendulum oscillating under natural conditions.
-								Shock absorbers in vehicles are an example of damping devices that reduce the vehicle’s vibrations.</p></li>
-							<p> Shock Absorbers</p>
-							<img src="{{url_for('static', filename='img/large.gif')}}" alt="shock absorbers" width="300px" height="200px">
-							
-							<!--<p style="color:blue;"> Let us consider the characteristic equation which is : mx<sup>2</sup> + γ x + k.
-							<br> it has discriminant which equals to: γ<sup>2</sup>-4mk. <br>It can be<ol style="color:blue;">
-								<li>positive </li>
-								<li>negative</li>
-								<li>zero</li>
-							</ol></p>
-							<li><u><strong><p>Types of Damping</p></strong></u> 
-								
-								<li>-->
-								<p>If the damping force `F_o` ,is proportional to the velocity `v_o`, with a damping constant `b`, then<br>
-									<p style = "padding:10px; border: 2px solid red; margin-right:700px; text-align: center;">F<sub>o</sub> = -b𝑣<sub>o</sub></p>
-								<p> here `v_o` so `F_o`= 0 
-								The equation of motion (1) becomes:</p>
-                                <div class="cmath">
-									<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`m \ddot x + b \dot x + kx = 0`</p>
-									
-								</div>
-								
-								<div class="cmath">
-									<p style="color:rgb(71, 0, 71)">Solution to the equation is :`A e ^ {-\gamma t} cos(\omegat+\phi)`</p>
-									
-								</div>
-								
-								<div class="cmath">
-									<p>where, `\gamma = \frac{b}{2m}`and, <br>
-									
-								 b: damping factor ,<br>
-									m : mass of the ball in kg.<br>
-									and amplitude is given by:-</p></div>
-									<div class="cmath">
-										<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`A = \frac{F_o}{m\sqrt{(\omega^2-\omega_o^2)^2 + 4\gamma^2m^2`</p>
-										
-									</div>
-									<p> ω<sub>o</sub> is natural frequency of the damped system and `\omega`' is the frequency of the damped oscillator.<br>
-										<div class="cmath">
-											<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`\omega\' = \sqrt{\frac{k}{m}-\frac{b^2}{4m^2}}`</p>
-											
-										</div>
-								 </p>
-								
-								<p>Under certain conditions damping is of three types:-</p>
-                                    <strong><u><p>1.Under Damping</p></u></strong>
-								   <p>When damping is small, the system vibrates at first approximately 
-									as if there were no damping, but the amplitude of the solutions decreases exponentially.<br>
-									 
-									<strong>Example :</strong> a swinging pendulum decreasing in amplitude until it comes to a stop.<br>
-									<p><u>Under damped oscillations:</u> `b` < 1 </p>  <br>
-
-								    <div class="cmath"><p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">
-										`x(t) = A e ^ {-\gamma t} cos(\omegat+\phi)`<br>where,<br>`\gamma= \frac{b}{2m}`: `b`<1</p></div><br>
-									
-
-                                    <strong><u><p>2.Critical Damping</p></u></strong>
-								   <p>When a critically damped oscillator is displaced from the equilibrium,
-									 it will return to rest at its equilibrium position in the shortest possible time without oscillating.
-									 Critical damping occurs when the position of the mass will asymptotically approach 0. Depending on the initial velocity, it will either 
-									 go monotonically to zero or reach some maximum displacement before it turns around and goes to 0.<br><br>
-									 <strong>Example: </strong>car suspension systems prevent the car from oscillating
-									 after travelling over a bump in the road.<br>
-									 <u><p>Critically damped oscillations:</u> `b` = 1  </p><br>
-									 <div class="cmath"><p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">
-										`x(t) = A e ^ {-\gamma t} cos(\omegat+\phi)`<br>where,<br>`\gamma= \frac{b}{2m}`: b = 1 </p></div><br>
-									 
-									 </p>
-                                    <strong><u><p>3.Over Damping</p></u></strong>
-								<p>When a heavily damped oscillator is displaced from the equilibrium, 
-									it will take a long time to return to its equilibrium position without oscillating .
-									When damping is that large, the system does not oscillate at all.<br>
-									 <strong>Example:</strong> car suspension systems prevent the car from oscillating after travelling 
-									over a bump in the road<br>
-									 <u><p>Over damped oscillations:</u> `b` > 1 </p>
-									 <div class="cmath"><p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">
-										`x(t) = A e ^ {-\gamma t} cos(\omegat+\phi)`<br>where,<br>`\gamma= \frac{b}{2m}`: b>1 </p></div><br>
-										</p> 
-									
-							</li>
 						</ul>
-						<center>
-						<h2><u>Forced Oscillators</u> </h2>
-					    </center>
-						<ul type="None">
-							<li><p>Forced oscillations occur when an oscillating system is driven by a periodic force that is external to the oscillating system.
-							</p>
-							</li>
-							<li>
-								<p><strong><u>Example:-</u></strong>Applying force for movement of a pendulum
-								turning of a radio </p><br>
-								
-							</li>
-							<p>The equation is:<br></p>
-							<li><div class="cmath">
-								<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`m \ddot x + b \dot x + kx = F_o sin( \omega t + \phi)`</p>
-								
-							</div>
-							</li>
-							<li><p>here <br>ω: driven frequency for forced oscillations.<br> F<sub>o</sub>:force for the forced oscillator</p></li>
-							<li><u><strong><p>Resonance</p></strong></u> 
-								<p>If the forcing frequency is close to the natural frequency of the system, 
-								and the system is lightly damped, huge vibration amplitudes may occur. 
-								 This phenomenon is known as resonance. </p> </li></li>
-							<li> <p>1. musical instruments (acoustic resonance).   <br> 
-								2. Most clocks keep time by mechanical resonance in a balance wheel,   pendulum, or quartz crystal. <br>
-								3. Tidal resonance of the Bay of Fundy.<br>   
-								4. Orbital resonance as in some moons of the solar system's gas giants.  <br>  
-								5. The resonance of the basilar membrane in the ear.    <br>
-								6. Making a child's swing swing higher by pushing it at each swing.  <br>  
-								7. A wineglass breaking when someone sings a loud note at exactly the right   pitch.</p><br>
-						   </li>
-						   
-						   <center> <h3> <u><p>Additional Information:</p></u></h3></center>
-						   <li> <p>There are some other types of oscillations such as :-</p></li>
-						   <center>
-						   <h3> <u><strong><p> Coupled Oscillators</p></strong></u> </h3> </center>
-						   <p>Coupled Oscillations occur when two or more oscillating systems are connected 
-						   in such a manner as to allow motion energy to be exchanged between them.  
-						   Coupled oscillators occur in nature (e.g., the moon and earth orbiting each other)
-						    or can be found in man-made devices (such as with the pacemaker)</p>
-							<img src="{{url_for('static', filename='img/Coupled_oscillators.gif')}}" alt="coupled oscillators" width="300px" height="200px">
-						
-						   
-						</li>
-						</ul>
-			</div>
-		</main>
-		
 	</section>
 <footer >
             <div class="foot1">
