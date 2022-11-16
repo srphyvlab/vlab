@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style/style.css')}}">
 	<script async = "true" src="http://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=AM_CHTML"></script>
-	<title>Virtual Labs Dei-Linear Control Systems</title>
+	<title>DEI VLAB</title>
 <link rel = "icon" href = 
 "https://www.vlab.co.in/images/logo.jpg" 
         type = "image/x-icon">
@@ -34,12 +34,12 @@
         </div>
 	</header>
 	<div class="navigation-bar">
-		<a href="../../index.html">Physical Scienes Lab</a> > <a href="../index.html">Experiments</a>
+        <a href="{{url_for('index')}}">Waves, Optics and Quantum Mechanics Laboratory</a> > <a href="{{url_for('exp')}}">Experiments</a>
 	</div>
 	<section class="csection" id="csec">
 		<nav class="side-nav" id="navbar">
 			<div class="nav-element">
-				<a href="{{url_for('exp1')}}" ><span class="cp">Aim</span></a>
+				<a href="{{url_for('exp1')}}" >Aim</a>
 			</div>
 			<div class="nav-element">
 				<a href="{{url_for('theory1')}}" >Theory</a>
@@ -51,7 +51,7 @@
 				<a href="{{url_for('pre1')}}" >Pretest</a>
 			</div>
 			<div class="nav-element">
-				<a href="{{url_for('pro1')}}" >Procedure</a>
+				<a href="{{url_for('pro1')}}" ><span class ="cp">Procedure<span></a>
 			</div>
 			<div class="nav-element">
 				<a href="{{url_for('sim1')}}" >Simulation</a>
@@ -78,10 +78,10 @@
 					<strong><p style="color:#2867B2;">1.To study the Simple harmonic motion</p></strong>
 					<ul>
 					<li> <p>step1: Read the theory </p> </li>
-					<li> <p>step2: Set the damping factor (`b`) = 0 </p></li>
+					<li> <p>step2: Set the damping factor (b) = 0 </p></li>
 					
-					<li> <p>step3: set `v_o`= 0 m/s</p></li> 
-					<li> <p>step4: Drag the ball to maximum starting position say `x_o`= 10.0m and play the animation button. </p></li>
+					<li> <p>step3: set v<sub>o</sub>= 0 m/s</p></li> 
+					<li> <p>step4: Drag the ball to maximum starting position say x<sub>o</sub>= 10.0m and play the animation button. </p></li>
 					<li> <p>step5: Observe the graph,wait until  the animation ends</p></li>	
 					<u style="color:darkblue;"><p style="color:darkblue;">Graph representing S.H.M motion (position graph)</p></u>
 					<img src="{{url_for('static', filename='img/graph1.png')}}" alt="screenshot1"
@@ -98,34 +98,34 @@
 					   <ul>
 						<li><p>step1: Reset the simulation</p></li>
 					
-						<li><p>step2: Set  `v_o`= 0 m/sec </p></li>
-						<li><p>step3: change the damping factor(`b`) from 0 to some value take three cases and 
+						<li><p>step2: Set v<sub>o</sub>= 0 m/sec </p></li>
+						<li><p>step3: change the damping factor(b) from 0 to some value take three cases and 
 							reset the simulation in each case</p></li>
 						<ul ><li><p>Case 1:<u>Under-Damping </u></p></li>
-						    <p>Set the value of `b` < 1 (say `b`= 0.5) </p>
+						    <p>Set the value of b < 2√2 (say b= 0.5) </p>
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing under-damped oscillatory  motion (position graph)</p></u>
-							<img src="{{url_for('static', filename='img/graph3.png')}}" alt="screenshot3"
+							<img src="{{url_for('static', filename='img/ss1.png')}}" alt="screenshot3"
 					        width="500px" height="300px">
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing under-damped oscillatory motion (position and velocity graph)</p></u>
 							<img src="{{url_for('static', filename='img/graph4.png')}}" alt="screenshot4"
 					        width="500px" height="300px">
 							<li><p>Case 2: <u>Critical-Damping</u></p></li>
-							<p>Set the value of `b` = 1  </p>
+							<p>Set the value of b = 2√2  </p>
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing critical-damped oscillatory motion (position graph)</p></u>
-							<img src="{{url_for('static', filename='img/graph5.png')}}" alt="screenshot5"
+							<img src="{{url_for('static', filename='img/ss3.png')}}" alt="screenshot5"
 					        width="500px" height="300px">
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing critical-damped oscillatory motion (position and velocity graph)</p></u>
-							<img src="{{url_for('static', filename='img/graph6.png')}}" alt="screenshot6"
+							<img src="{{url_for('static', filename='img/ss2.png')}}" alt="screenshot6"
 					        width="500px" height="300px">
 							<li><p>Case 3: <u>Over-Damping</u></p></li>
-							<p>Set the value of `b` > 1 (say `b`= 2) </p>
+							<p>Set the value of b > 2√2 (say b= 3) </p>
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing over-damped oscillatory motion (position graph)</p></u>
-							<img src="{{url_for('static', filename='img/graph7.png')}}" alt="screenshot7"
+							<img src="{{url_for('static', filename='img/ss4.png')}}" alt="screenshot7"
 					        width="500px" height="300px">
 							<u style="color:darkblue;"><p style="color:darkblue;">Graph representing over-damped oscillatory motion (position and velocity graph)</p></u>
-							<img src="{{url_for('static', filename='img/graph8.png')}}" alt="screenshot8"
+							<img src="{{url_for('static', filename='img/ss5.png')}}" alt="screenshot8"
 					        width="500px" height="300px"></ul>
-						<li><p>step4: Drag the ball to maximum starting position say `x_o`= 10.0m  and play the animation button.</p></li>
+						<li><p>step4: Drag the ball to maximum starting position say x<sub>o</sub>= 10.0m  and play the animation button.</p></li>
 						<li><p>step5: In all the above three cases mentioned observe the graph and wait till animation ends.</p></li>
 					</ul>
 					<br>
@@ -136,12 +136,11 @@
 						<strong><p style="color:#2867B2;">3.To study Forced oscillatory motion</p></strong>
 						<ul>
 						<li> <p>step1: Reset the simulation again </p> </li>
-						<li> <p>step2: Set the damping coefficient (`b`) > 1 </p></li>
-						<li> <p>step3: Change the value of initial velocity `v_o`= 2m/sec</p></li> 
-						<li> <p>step4: Set value of driven frequency(`ω`) = 1.41</p></li>
+						<li> <p>step2: Set the damping coefficient (b) > 2√2 </p></li>
+						<li> <p>step3: Change the value of initial velocity v<sub>o</sub>= 2m/sec</p></li> 
+						<li> <p>step4: Set value of driven frequency(ω) = 1.41</p></li>
 						<li> <p>step5: Set some value of driven amplitude F<sub>o</sub> which will be the force for oscillation</p></li>
-						
-						<li> <p>step6: Drag the ball to maximum starting position say `x_o`= 10.0m  and play the animation button.</p></li>
+						<li> <p>step6: Drag the ball to maximum starting position say x<sub>o</sub>= 10.0m  and play the animation button.</p></li>
 						<li> <p>step7: Observe the graph till the animation ends</p></li>
 						<u style="color:darkblue;"><p style="color:darkblue;">Graph representing forced-oscillatory motion (position graph)</p></u>
 						<img src="{{url_for('static', filename='img/graph9.png')}}" alt="screenshot9"
@@ -152,7 +151,7 @@
 						
 						</ul>
 					<br>
-					<b><p style="color:#e52d27;"><u> Perform the following experiments</u></p></b>
+					<b><p ><u> Perform the following experiments</u></p></b>
 					<!--<p style="color:blueviolet;">  <strong><u>Experiment-1: </u></strong></p><p>With damping, b set to 0.2 Ns/m and F0 set to 1.0 N 
 						 try several values of the angular driving frequency, ω. Start with a value of 1.1 rad/s 
 						 and increase by 0.1 each time until you get to 1.8 rad/s. In each case, wait until the
@@ -248,25 +247,26 @@
 					
 					<p>Result:  The maximum amplitude is  _________<br></p>-->
 					<p>
-						<strong><p style="color:blueviolet;"><u>Experiment-1:</u> </p></strong>
+						<strong><p ><u>Experiment-1:</u> </p></strong>
 							<p>	Perform experiment to calculate the value of k (spring constant) in the following
 								cases described below.
-								In each case record observations into the table and compute the value of `k`.
-							Take value of `m` =1 kg in each case.</p>
+								In each case record observations into the table and compute the value of k.
+							Take value of m =1 kg in each case.</p>
 							    <ul type="None">
-									<li><p><u>Case 1:</u> Free oscillator (simple harmonic motion) when `b` = 0</p></li>
+									<li><p><u>Case 1:</u> Free oscillator (simple harmonic motion) when b = 0</p></li>
 									    <ol>
-                                            <li><p>set different values for `x_o`</p></li>
+                                            <li><p>set different values for x<sub>o</sub></p></li>
 											<li><p> keep other parameters = 0</p></li>
 											<li><p>record the value of time in each case</p></li>
 											<li><p>calculate corrosponding angular frequency</p></li>
-											<li><p>then compute `k` (spring constant) using formula: `\omega=\sqrt{\frac{k}{m}}`</p></li>
+											<li><p>then compute k (spring constant) using formula<br> <br>
+												<img src="{{url_for('static', filename='img/eq6.png')}}" alt="shock absorbers" width=90px> </p></li>
 											<table style="width:80%">
 												<tr>
 												<th style="width:1%" >S.no</th>
-												<th style="width:12%">`x_o` (displacement)</th>
-												<th style="width:5%">`f` (frequency)</th>
-												<th style="width:18%">`\omega` (angular frequency)</th>
+												<th style="width:12%">x<sub>o</sub> (displacement)</th>
+												<th style="width:5%">f (frequency)</th>
+												<th style="width:18%">ω (angular frequency)</th>
 											   </tr>
 											   <tr>
 												<th>1.</th>
@@ -315,27 +315,27 @@
 										
 										
 										<ul type="None">
-                                        <p style="color:darkmagenta;"> The mean `\omega`: _________ </p></li>
-										<li><p style="color:darkmagenta;">Computed value of `k`:__________</p></li></ul>
+                                        <p > The mean ω: _________ </p></li>
+										<li><p >Computed value of k:__________</p></li></ul>
                                     </ol>
 										
 										<br>
-									<li><p><u>Case 2:</u>Under-Damped damped Oscillator when `b` < 1 </p></li>
+									<li><p><u>Case 2:</u>Under-Damped damped Oscillator when b < 2√2 </p></li>
 									   <ol >
 
-										    <li><p>set different values for `x_o`</p></li>
-											<li><p> set `b<1` and keep other parameters =0 </p></li>
+										    <li><p>set different values for x<sub>o</sub></p></li>
+											<li><p> set b<2√2 and keep other parameters = 0 </p></li>
 											<li><p>record the value of time in each case</p></li>
-											<li><p>calculate corrosponding angular frequency</p></li>
-											<li><p>then compute `k` (spring constant) using formula: `\omega = \sqrt {\frac{k}{m}-\frac{b^2}{4m^2}} `</p></li>
-											<ul type="None">
-											<li><p style="color:darkmagenta;">Value of `b` used in the experiment:_________</p></li></ul>
+											<li><p>calculate corrosponding angular frequency:</p><img src="{{url_for('static', filename='img/eq19.png')}}" alt="shock absorbers" width=200px> <br></p></li>
+											<li><p> Value of b used in the experiment:_________</p></li></ul>
+											
+											<br>
 											<table style="width:80%">
 												<tr>
 												<th style="width:1%" text-align="center;">S.no</th>
-												<th style="width:13%">`x_o` (displacement)</th>
-												<th style="width:5%">`f` (frequency)</th>
-												<th style="width:18%">`\omega` (angular frequency)</th>
+												<th style="width:13%">x<sub>o</sub> (displacement)</th>
+												<th style="width:5%">f (frequency)</th>
+												<th style="width:18%"> ω (angular frequency)</th>
 											   </tr>
 											   <tr>
 												<th>1.</th>
@@ -380,29 +380,26 @@
 											</table>
 									
 										<ul type="None">
-										<li><p style="color:darkmagenta;">The mean `\omega` = ________</p></li>
-										<li><p style="color:darkmagenta;"> computed value of `k`=_____________</p></li></ul>
+										<li><p >The mean  = ________</p></li>
+										<li><p > computed value of k=_____________</p></li></ul>
 									</ol>
 										<br>
-								    <li><p><u>Case 3:</u> Forced oscillator when `b` > 1 </p></li>
+								    <li><p><u>Case 3:</u> Forced oscillator when b > 2√2 </p></li>
 											
 								
 									<ol>
-										<li><p>set different values for `F_o`</p></li>
-										<li><p> set `b`=0.40,driven frequency(`\omega`)=1rad/sec, </p></li>
+										<li><p>set different values for F<sub>o</sub></p></li>
+										<li><p> set driven frequency ω =1rad/sec, </p></li>
 										<li><p> obtain the value of amplitude by observing graph each time.</p></li>
-										<li><p>obtain the value of `\omega` using the relation:
-											<div class="cmath">
-												<p style="padding:10px; border: 2px solid red; margin-right:500px; text-align: center;">`A= \frac{F_o}{m\sqrt{(\omega^2-\omega_o^2)^2 + 4\gamma^2m^2`</p>
-												
-											</div></li>
+										<li><p>obtain the value of ω using the relation:
+											<p><img src="{{url_for('static', filename='img/eq3.png')}}" alt="shock absorbers" width=400px></p>
 										<li><p>then compute k (spring constant) from the calculated mean value of </p></li><br>
 										<table style="width:80%">
 											<tr>
 											<th style="width:2%" text-align="center;">S.no</th>
-											<th style="width:10%">`F_o` (force)</th>
-											<th style="width:5%">`A` (amplitude)</th>
-											<th style="width:10%">`\omega` (angular frequency)</th>
+											<th style="width:10%">F<sub>o</sub> (force)</th>
+											<th style="width:5%"> A (amplitude)</th>
+											<th style="width:10%">ω (angular frequency)</th>
 										   </tr>
 										   <tr>
 											<th>1.</th>
@@ -447,8 +444,8 @@
 										</table>
 									
 									<ul type="None">
-										<li><p style="color:darkmagenta;">The mean `\omega` = ________</p></li>
-										<li><p style="color:darkmagenta;"> computed value of `k`=_____________</p></li></ul>
+										<li><p>The mean ω = ________</p></li>
+										<li><p > computed value of k =_____________</p></li></ul>
 									</ol>
 										
 									</ul>
